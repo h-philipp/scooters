@@ -1,0 +1,30 @@
+{
+  "name": "scooter",
+  "version": "1.0.0",
+  "description": "scooter",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node --nolazy --inspect-brk=9229 app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hphilipp@bitbucket.org/hphilipp/instameal.git"
+  },
+  "keywords": [
+    "insta",
+    "meal",
+    "nice",
+    "receipts",
+    "app"
+  ],
+  "author": "Philipp, Georg",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/hphilipp/instameal#readme"
+}
