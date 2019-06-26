@@ -4,6 +4,9 @@ NAME := scooters
 OS := $(shell uname)
 RELEASE_VERSION := $(shell cat ../../VERSION)
 
+export CHART_REPOSITORY=jenkins-x-chartmuseum-75d45b6d7f-xtm86
+echo "$(CHART_REPOSITORY)"
+
 build: clean
 	rm -rf requirements.lock
 	helm dependency build
