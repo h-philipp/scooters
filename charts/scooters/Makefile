@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := http://jenkins-x-chartmuseum-75d45b6d7f-xtm86:8080
 CURRENT=$(pwd)
 NAME := scooters
 OS := $(shell uname)
