@@ -1,4 +1,7 @@
-FROM node:11 as scooter-app
+FROM node:9-slim as scooter-app
+
+ENV PORT 8080
+EXPOSE 8080
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -8,12 +11,11 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY ./package*.json ./
 
-RUN npm install
+# Bundle app source
+COPY . .
+
 # If you are building your code for production
 # RUN npm install --only=production
+RUN npm install
 
-# Bundle app source
-COPY ./ .
-
-EXPOSE 8080
 CMD [ "npm", "start" ]
