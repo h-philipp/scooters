@@ -1,0 +1,31 @@
+{
+  "name": "scooter",
+  "version": "1.0.0",
+  "description": "scooter",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node --nolazy --inspect-brk=9229 app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h-philipp/scooters"
+  },
+  "keywords": [
+    "scooter",
+    "aws",
+    "jenkins-x",
+    "docker",
+    "kubernetes",
+    "ecs",
+    "app"
+  ],
+  "author": "Philipp, Georg",
+  "license": "ISC",
+  "homepage": "https://github.com/h-philipp/scooters#readme"
+}

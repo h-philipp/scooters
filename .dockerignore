@@ -2,4 +2,7 @@ draft.toml
 charts/
 NOTICE
 LICENSE
+docker-compose.ci.yml
+Dockerfile
+.git/
 README.md
