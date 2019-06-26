@@ -10,3 +10,4 @@ dependencies:
 - alias: preview
   name: scooters
   repository: file://../scooters
+  version: 0.0.3
