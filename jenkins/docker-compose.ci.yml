@@ -4,14 +4,14 @@ services:
     jenkins:
         container_name: jenkins-master
         ports:
-            - '8081:8081'
-            - '50001:50001'
+            - '8080:8080'
+            - '50000:50000'
         image: jenkins-master
     jenkins-slave:
         container_name: jenkins-slave
         restart: always
         environment:
-            - 'JENKINS_URL=http://jenkins:8081'
+            - 'JENKINS_URL=http://jenkins:8080'
         image: jenkins-slave
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
