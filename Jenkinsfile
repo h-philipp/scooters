@@ -6,7 +6,7 @@ node('docker') {
     
   stage('Install packages') {
 
-    sh 'npm --version'
+    npm --version
     sh 'npm install'
     sh 'npm test'  
   }
