@@ -1,14 +1,17 @@
 node('docker') {
 
+  tools {nodejs "node"}
+
   stage('Checkout') {
       checkout scm
     }
     
   stage('Install packages') {
 
-    npm 'npm --version'
-    npm 'npm install'
-    npm 'npm test'  
+    sh 'npm --version'
+    sh 'npm config ls'
+    sh 'npm install'
+    sh 'npm test'  
   }
   
   stage('Build & UnitTest') {
