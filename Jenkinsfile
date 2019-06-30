@@ -1,7 +1,5 @@
 node('docker') {
 
-  tools {nodejs "node"}
-
   stage('Checkout') {
       checkout scm
     }
