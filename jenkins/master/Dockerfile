@@ -3,7 +3,7 @@
 FROM jenkins/jenkins:latest as jenkins-master
  
 # Installing the plugins we need using the in-built install-plugins.sh script
-RUN /usr/local/bin/install-plugins.sh git bitbucket matrix-auth workflow-aggregator docker-workflow blueocean credentials-binding
+RUN /usr/local/bin/install-plugins.sh git bitbucket nodejs matrix-auth workflow-aggregator docker-workflow blueocean credentials-binding
  
 # Setting up environment variables for Jenkins admin user
 ENV JENKINS_USER scooter
