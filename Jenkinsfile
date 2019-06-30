@@ -6,10 +6,6 @@ node('docker') {
     
   stage('Install packages') {
 
-    env.NODEJS_HOME = "${tool 'Node 6.9.5'}"
-    
-    // on linux / mac
-    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
     sh 'npm --version'
     sh 'npm install'
     sh 'npm test'  
