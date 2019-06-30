@@ -1,9 +1,0 @@
-
-version: '0.1'
-services:
-    scooter:
-        container_name: scooter
-        ports:
-            - '8080:8080'
-            - '50000:50000'
-        image: scooter-app
