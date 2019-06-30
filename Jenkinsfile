@@ -4,11 +4,9 @@ node('docker') {
       checkout scm
     }
     
-  stage('Install') {
-    sh "#!/bin/bash \n" + 
-    "echo \"Using \$SHELL\"\n"
-    sh "npm install"
-    sh "CI=true DISPLAY=:99 npm test"
+  stage('Install packages') {
+    npm install
+    npm test
   }
   
   stage('Build & UnitTest') {
