@@ -1,4 +1,4 @@
-node('docker') {
+pipeline {
 
   agent {
         docker {
@@ -7,10 +7,7 @@ node('docker') {
         }
     }
 
-    stage('Checkout') {
-      checkout scm
-    }
-    /*stages {
+    stages {
 
         stage('Checkout') {
            steps {
@@ -26,14 +23,16 @@ node('docker') {
           sh 'npm test'  
         }
       }
-
-      node('docker') {
-        stage('Build & UnitTest') {
+      
+      stage('Build & UnitTest') {
+        steps {
           sh "#!/bin/bash \n" + 
           "echo \"Using \$SHELL\"\n"
-          sh "docker build -t scooter-app ."
-          sh "docker-compose -f docker-compose.ci.yml up"
-        }  
+          //sh "docker build -t scooter-app ."
+          //sh "docker-compose -f docker-compose.ci.yml up"
+          sh "npm start"
+        }
       }
-    }*/
+
+    }
 }
