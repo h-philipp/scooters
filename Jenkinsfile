@@ -46,8 +46,8 @@ pipeline {
             steps {
                 sh "#!/bin/bash \n" + 
                 "echo \"Using \$SHELL\"\n"
-                chmod +x ./jenkins/scripts/deliver.sh
-                chmod +x ./jenkins/scripts/kill.sh
+                //chmod +x ./jenkins/scripts/deliver.sh
+                //chmod +x ./jenkins/scripts/kill.sh
 
                 sh '$WORKSPACE/jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
