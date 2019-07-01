@@ -1,4 +1,4 @@
-pipeline {
+node('docker') {
 
   agent {
         docker {
@@ -7,7 +7,10 @@ pipeline {
         }
     }
 
-    stages {
+    stage('Checkout') {
+      checkout scm
+    }
+    /*stages {
 
         stage('Checkout') {
            steps {
@@ -32,5 +35,5 @@ pipeline {
           sh "docker-compose -f docker-compose.ci.yml up"
         }  
       }
-    }
+    }*/
 }
