@@ -36,14 +36,21 @@ pipeline {
 
       stage('Test') {
             steps {
-                sh './jenkins/scripts/test.sh'
+              sh "#!/bin/bash \n" + 
+              "echo \"Using \$SHELL\"\n"
+              chmod +x './jenkins/scripts/test.sh'
+              sh '$WORKSPACE/jenkins/scripts/test.sh'
             }
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh "#!/bin/bash \n" + 
+                "echo \"Using \$SHELL\"\n"
+                chmod +x '$WORKSPACE/jenkins/scripts/deliver.sh'
+                chmod +x '$WORKSPACE/jenkins/scripts/kill.sh'
+                sh '$WORKSPACE/jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
+                sh '$WORKSPACE/jenkins/scripts/kill.sh'
             }
         }
 
