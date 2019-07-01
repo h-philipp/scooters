@@ -24,7 +24,7 @@ var scooterRouter = require('./routes/scooter'); //Import routes for "scooter" a
 
 app.use('/', scooterRouter);  // Add scooter router to middleware chain.
 //listen on port 8080
-let server = app.listen("8081", function() {
+let server = app.listen("3000", function() {
     let host = server.address().address;
     let port = server.address().port;
     
