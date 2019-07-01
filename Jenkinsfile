@@ -1,4 +1,11 @@
-node('docker') {
+pipeline {
+
+  agent {
+        docker {
+            image 'node:9-slim' 
+            args '-p 3000:3000' 
+        }
+    }
 
   stage('Checkout') {
       checkout scm
