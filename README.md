@@ -6,7 +6,7 @@ This is a test app to show possibilities of jenkins x in AWS ECS and how complet
 docker build -t scooter-app .
 
 # Run scooter app on docker
-docker-compose -f docker-compose.ci.yml up
+docker-compose -f ./docker-compose.ci.yml up
 
 # Build jenkins master
 docker build -t jenkins-master .
@@ -15,4 +15,4 @@ docker build -t jenkins-master .
 docker build -t jenkins-slave .
 
 # Run jenkins locally
-docker-compose -f .\docker-compose.ci.yml up
+docker-compose -f ./docker-compose.ci.yml up
