@@ -19,8 +19,7 @@ pipeline {
         steps {
           sh 'npm --version'
           sh 'npm config ls'
-          sh 'npm install'
-          sh 'npm test'  
+          sh 'npm install' 
         }
       }
 

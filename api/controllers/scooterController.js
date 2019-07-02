@@ -10,9 +10,9 @@ let loadScooterPromise = async function() {
         {
             "name": "Scooter2"
         },
-        //{
-        //    "name": "Scooter3"
-        //},
+        {
+           "name": "Scooter3"
+        },
         {
             "name": "Scooter4"
         }]
