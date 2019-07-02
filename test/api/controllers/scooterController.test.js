@@ -15,7 +15,7 @@ beforeEach('Setting up the scooter list', function(){
 
   scooterController.scooter().then(scooter => {
     console.log('load scooter');
-    loadedScooter = scooter;
+    loadedScooter = scooter[scooterController.scooterName];
     //print scooter
     //console.log(loadedScooter);
     console.log('load scooter finished');

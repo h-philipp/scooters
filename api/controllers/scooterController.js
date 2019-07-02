@@ -21,7 +21,7 @@ let loadScooterPromise = async function() {
     return new Promise((resolve, reject) => {
 
         //image long database query
-        scooterJson = scooter[scooterArrayName];
+        scooterJson = scooter;
 
         resolve(scooterJson);
     });
@@ -32,7 +32,7 @@ let scooterSizePromise = async function() {
     return new Promise((resolve, reject) => {
 
         loadScooterPromise().then(scooter => {
-            resolve(scooter.length);
+            resolve(scooter[scooterArrayName].length);
         })
         .catch(err => {
             reject(err);
@@ -44,7 +44,7 @@ let scooterSizePromise = async function() {
 //exports
 exports.scooterName = scooterArrayName;
 exports.scooter = loadScooterPromise;
-exports.scooterSize = function() { return scooterJson != undefined ? scooterJson.length : undefined; } //only available if load scooter was called before
+exports.scooterSize = function() { return scooterJson != undefined ? scooterJson[scooterArrayName].length : undefined; } //only available if load scooter was called before
 exports.scooterSizeAsync = scooterSizePromise;
 
 exports.getScooterResponse = async function(req, res) {
