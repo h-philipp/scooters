@@ -1,3 +1,5 @@
 node_modules/
 codeship.aes
-deployment.env
+heroku.env
+docker-cred.env
+dockercfg
