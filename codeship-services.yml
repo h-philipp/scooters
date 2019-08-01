@@ -1,7 +1,8 @@
 app:
-  image: hphilipp/scooter:lastest
-  dockerfile: Dockerfile
-
+  build:
+    image: hphilipp/scooter:lastest
+    context: app
+    dockerfile: Dockerfile
 codeship-heroku-deployment:
   image: codeship/heroku-deployment
   encrypted_env_file: heroku.env.encrypted
