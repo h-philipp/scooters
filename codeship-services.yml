@@ -1,0 +1,10 @@
+app:
+  build:
+    image: scooter-app
+    context: app
+    dockerfile: Dockerfile
+codeship-heroku-deployment:
+  image: codeship/heroku-deployment
+  encrypted_env_file: deployment.env.encrypted
+  volumes:
+    - ./:/deploy
