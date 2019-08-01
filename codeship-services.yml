@@ -1,10 +1,12 @@
 app:
   build:
-    image: scooter-app
-    context: app
+    image: registry.heroku.com/scooter-app/web
     dockerfile: Dockerfile
-codeship-heroku-deployment:
-  image: codeship/heroku-deployment
-  encrypted_env_file: deployment.env.encrypted
-  volumes:
-    - ./:/deploy
+  encrypted_env_file:
+    - deployment.env.encrypted
+
+heroku-dockercfg-generator:
+  image: codeship/heroku-dockercfg-generator
+  add_docker: true
+  encrypted_env_file:
+    - deployment.env.encrypted
