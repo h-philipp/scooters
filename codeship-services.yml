@@ -1,6 +1,6 @@
 app:
   build:
-    image: hphilipp/scooter:lastest
+    image: hphilipp/scooter:latest
     context: app
     dockerfile: Dockerfile
 codeship-heroku-deployment:
