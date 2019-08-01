@@ -1,4 +1,4 @@
-name: Push Image
+- name: Push Image
   service: app
   type: push
   image_name: registry.heroku.com/scooter-app/web
