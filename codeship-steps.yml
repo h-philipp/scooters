@@ -1,5 +1,5 @@
 - name: deploy
-	  tag: codeship
-	  service: codeship-heroku-deployment
-	  command: codeship_heroku deploy /deploy scooters-codeship 
+    tag: codeship
+    service: codeship-heroku-deployment
+    command: codeship_heroku deploy /deploy scooters-codeship
     encrypted_dockercfg_path: dockercfg.encrypted
