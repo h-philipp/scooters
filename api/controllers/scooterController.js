@@ -1,6 +1,8 @@
 
+let scooterJsonName = "scooter";
+
 let scooter = async function() {
-    var scooterJson = { "scooter": [ 
+    var scooterJson = { scooterJsonName: [ 
         {
             "name": "Scooter1"
         },
@@ -22,6 +24,7 @@ let scooter = async function() {
 
 //exports
 exports.scooter = scooter;
+exports.scooterName = scooterJsonName;
 
 exports.getScooterResponse = async function(req, res) {
     //get scooters
