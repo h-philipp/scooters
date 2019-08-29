@@ -1,8 +1,8 @@
+let scooterJson;
+let scooterArrayName = "scooter"
 
-let scooterJsonName = "scooter";
-
-let scooter = async function() {
-    var scooterJson = { scooterJsonName: [ 
+let loadScooterPromise = async function() {
+    let scooter = { "scooter": [ 
         {
             "name": "Scooter1"
         },
@@ -18,13 +18,33 @@ let scooter = async function() {
     };
 
     return new Promise((resolve, reject) => {
+
+        //image long database query
+        scooterJson = scooter;
+
         resolve(scooterJson);
     });
 };
 
+let scooterSizePromise = async function() {
+
+    return new Promise((resolve, reject) => {
+
+        loadScooterPromise().then(scooter => {
+            resolve(scooter[scooterArrayName].length);
+        })
+        .catch(err => {
+            reject(err);
+        })
+        
+    });
+};
+
 //exports
-exports.scooter = scooter;
-exports.scooterName = scooterJsonName;
+exports.scooterName = scooterArrayName;
+exports.scooter = loadScooterPromise;
+exports.scooterSize = function() { return scooterJson != undefined ? scooterJson[scooterArrayName].length : undefined; } //only available if load scooter was called before
+exports.scooterSizeAsync = scooterSizePromise;
 
 exports.getScooterResponse = async function(req, res) {
     //get scooters
