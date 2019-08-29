@@ -49,7 +49,7 @@ exports.scooterSizeAsync = scooterSizePromise;
 exports.getScooterResponse = async function(req, res) {
     //get scooters
 
-    await scooter().then(scooter => {
+    await loadScooterPromise().then(scooter => {
         res.status(200).send(scooter);
     })
     .catch(err => res.status(500).send(err));
