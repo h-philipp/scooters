@@ -19,9 +19,12 @@ phases:
       - echo Compiling the Node.js code
       - echo Running unit tests
       - npm test
+      - docker build -t scooter-app .
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo Compose now built images
+      - docker-compose -f docker-compose.ci.yml up
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
