@@ -1,5 +1,5 @@
 var assert = require('assert');
-var scooterController =  require('../../../api/controllers/scooterController');
+var scooterController = require('../../../api/controllers/scooterController');
 
 var expect = require('chai').expect;
 var should = require('chai').should();
@@ -17,7 +17,7 @@ beforeEach('Setting up the scooter list', function(){
     console.log('load scooter');
     loadedScooter = scooter[scooterController.scooterName];
     //print scooter
-    //console.log(loadedScooter);
+    console.log(loadedScooter);
     console.log('load scooter finished');
   })
   .catch(err => {
