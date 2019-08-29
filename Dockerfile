@@ -1,7 +1,7 @@
 FROM node:9-slim as scooter-app
 
-ENV PORT 8080
-EXPOSE 8080
+ENV PORT 8081
+EXPOSE 8081
 
 # Create app directory
 WORKDIR /usr/src/app
