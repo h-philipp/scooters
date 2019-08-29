@@ -2,7 +2,7 @@ let scooterJson;
 let scooterArrayName = "scooter"
 
 let loadScooterPromise = async function() {
-    let scooter = { scooterArrayName: [ 
+    let scooter = { "scooter": [ 
         {
             "name": "Scooter1"
         },
